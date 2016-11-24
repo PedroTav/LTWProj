@@ -1,0 +1,25 @@
+body {
+    background: url("back1.jpg");
+}
+
+#header{
+  background-color: #eaf0f9;
+  text-align: center;
+}
+
+#button{
+  margin-top: 2em;
+}
+
+#stayloged{
+  margin-top: 0;
+}
+#content{
+  background-color: #eaf0f9;
+  margin-top: 0;
+  text-align: center;
+}
+
+#monkeylogo{
+  background-color: #eaf0f9;
+}

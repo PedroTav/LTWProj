@@ -1,0 +1,36 @@
+body {
+    background: url("back1.jpg");
+}
+
+
+
+
+#content{
+  background-color: #eaf0f9;
+  margin-top: 0;
+  text-align: center;
+}
+
+#button{
+  margin-top: 2em;
+}
+
+#monkeylogo{
+  background-color: #eaf0f9;
+}
+
+#birthdate{
+  margin-top: 2em;
+  text-align: center;
+
+}
+
+
+#birthdate ul {
+      list-style: none;
+      transform: translate(-1em);
+}
+
+#birthdate li{
+  display: inline;
+}
