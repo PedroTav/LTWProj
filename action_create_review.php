@@ -2,10 +2,11 @@
   include_once('config/init.php');
   include_once('database/review.php');
 
-  $username = trim(strip_tags($_POST['name']));
+  $username = $_POST['username'];
   $review = trim(strip_tags($_POST['review']));
+  $cat_id = $_POST['cat_id'];
 
-  createReview($username,$review);
+  createReview($username,$review,$cat_id);
 
-  header('Location: list_restaurants.php');
+  header("Location: view_page.php?cat_id=$cat_id ");
 ?>

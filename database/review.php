@@ -1,10 +1,10 @@
 <?php
 
-  function createReview($username,$review) {
+  function createReview($username,$review,$cat_id) {
     global $conn;
 
-    $stmt = $conn->prepare('INSERT INTO restaurant VALUES (NULL, ? , ?)');
-    $stmt->execute(array($username,$review));
+    $stmt = $conn->prepare('INSERT INTO reviews VALUES (NULL, ? , ? , ?)');
+    $stmt->execute(array($username,$review,$cat_id));
     return $stmt->fetch();
   }
 
