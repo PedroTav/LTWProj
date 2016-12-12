@@ -1,10 +1,26 @@
 <section id="content">
   <div id="view_page_header">
   <h1 id="view_page_header_title"><?=$restaurant['name']?> | <?=$restaurant['likes'] ?>
+
+    <?php foreach ($likes as $like) { ?>
+        <?php if($like['rest_id'] == $restaurant[id]){ ?>
+          <?php if($like['user_id'] == $_SESSION['username']){ ?>
+            <?php $bool = true; ?>
+            <?php } ?>
+          <?php } ?>
+      <?php }?>
+
     <?php if(isset($_SESSION['username'])){ ?>
+      <?php if($bool == false){?>
           <a href="action_like_restaurant.php?cat_id=<?=$restaurant['id']?>">
             <img  src="images/like.png" width="25" height="25" />
           </a>
+           <?php } ?>
+
+           <?php if($bool == true){?>
+                 <img  src="images/like.png" width="25" height="25" />
+                <?php } ?>
+
            <?php } ?>
            <?php if(!isset($_SESSION['username'])){ ?>
                    <img  src="images/like.png" width="25" height="25" />

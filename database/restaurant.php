@@ -50,4 +50,13 @@ WHERE id='$id' ");
     return $stmt->fetch();
   }
 
+    function Like2($cat_id, $username) {
+      global $conn;
+
+      $stmt = $conn->prepare('INSERT INTO Favorites VALUES (?, ?)');
+      $stmt->execute(array($username,$cat_id));
+      return $stmt->fetch();
+    }
+
+
 ?>

@@ -12,6 +12,11 @@ CREATE TABLE users (
   password VARCHAR NOT NULL
 );
 
+CREATE TABLE Favorites (
+  user_id VARCHAR NOT NULL REFERENCES users,
+  rest_id INTEGER NOT NULL REFERENCES restaurant
+);
+
 CREATE TABLE reviews(
   id INTEGER PRIMARY KEY,
   username VARCHAR NOT NULL,
