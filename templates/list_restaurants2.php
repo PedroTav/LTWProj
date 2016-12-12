@@ -9,7 +9,7 @@
         <?="Pontuação: "?> <?=$restaurant['likes']?>
         <?php if($restaurant['type'] == "Fast"): ?>
           <img id="type_image" src="images/category1.png">
-        <?php elseif($restaurant['type'] == "Tasca"): ?>
+        <?php elseif($restaurant['type'] == "Tavern"): ?>
           <img id="type_image" src="images/category2.png">
         <?php endif ?>
       </li>

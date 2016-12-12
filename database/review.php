@@ -1,10 +1,18 @@
 <?php
 
+function getReplies($reply) {
+  global $conn;
+
+  $stmt = $conn->prepare('SELECT * FROM restaurant WHERE reply =?');
+  $stmt->execute(array($reply));
+  return $stmt->fetchAll();
+}
+
   function createReview($username,$review,$cat_id) {
     global $conn;
 
-    $stmt = $conn->prepare('INSERT INTO reviews VALUES (NULL, ? , ? , ?)');
-    $stmt->execute(array($username,$review,$cat_id));
+    $stmt = $conn->prepare('INSERT INTO reviews VALUES (NULL, ? , ? , ? , ?)');
+    $stmt->execute(array($username,$review,0,$cat_id));
     return $stmt->fetch();
   }
 

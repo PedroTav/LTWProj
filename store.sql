@@ -4,6 +4,7 @@ CREATE TABLE restaurant (
   name VARCHAR NOT NULL,
   type VARCHAR NOT NULL,
   description VARCHAR NOT NULL
+  cat_user VARCHAR REFERENCES users NOT NULL
 );
 
 CREATE TABLE users (
@@ -15,6 +16,7 @@ CREATE TABLE reviews(
   id INTEGER PRIMARY KEY,
   username VARCHAR NOT NULL,
   review VARCHAR NOT NULL,
+  reply INTEGER REFERENCES reviews,
   cat_id INTEGER REFERENCES restaurant NOT NULL
 );
 

@@ -1,8 +1,26 @@
 <section id="content">
   <div id="view_page_header">
-  <h1 id="view_page_header_title"><?=$restaurant['name']?> | <?=$restaurant['likes'] ?> <img src="images/like.png" width="25" height="25"></h1>
+  <h1 id="view_page_header_title"><?=$restaurant['name']?> | <?=$restaurant['likes'] ?>
+
+
+    <?php if(isset($_SESSION['username'])){ ?>
+          <a href="action_like_restaurant.php?cat_id=<?=$restaurant['id']?>">
+            <img  src="images/like.png" width="25" height="25" />
+          </a>
+           <?php } ?>
+           <?php if(!isset($_SESSION['username'])){ ?>
+                   <img  src="images/like.png" width="25" height="25" />
+                  <?php } ?>
+
+
+
+
+  </h1>
   <h3 id="description" ><?=$restaurant['description']?></h3>
   <img id="image_restaurant" src="images/restaurant<?=$restaurant['id']?>.png">
+  <?php if ($_SESSION['username'] == $restaurant[cat_user]) {?>
+   <a class="btn"  href="edit_restaurant.php?cat_id=<?=$restaurant[id]?>">Edit</a>
+  <?php } ?>
   </div>
 
   <ul id="menus">
@@ -24,6 +42,7 @@
 
   <ul id ="reviews">
    <?php foreach ($reviews as $review) { ?>
+     
      <li>
        <div>User:
          <?=$review['username']?>
@@ -31,6 +50,8 @@
        <div>
          <?=$review['review']?>
        </div>
+
+
 
          <?php if (isset($_SESSION['username'])) {?>
          <button type="button">Reply!</button>
