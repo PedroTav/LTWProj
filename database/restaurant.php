@@ -15,11 +15,11 @@
     return $stmt->fetch();
   }
 
-  function createRestaurant($name,$description,$type) {
+  function createRestaurant($name,$description,$type,$owner) {
     global $conn;
 
-    $stmt = $conn->prepare('INSERT INTO restaurant VALUES (NULL, ?, ? , ? , ?)');
-    $stmt->execute(array(0,$name,$type,$description));
+    $stmt = $conn->prepare('INSERT INTO restaurant VALUES (NULL, ?, ? , ? , ?, ?)');
+    $stmt->execute(array(0,$name,$type,$description,$owner));
     return $stmt->fetch();
   }
 

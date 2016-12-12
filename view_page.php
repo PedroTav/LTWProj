@@ -10,6 +10,7 @@
   $reviews = getReviewsFromRestaurant($cat_id);
   $menus = getMenusFromRestaurant($cat_id);
 
+
   include ('templates/header.php');
   include ('templates/view_page.php');
   include ('templates/footer.php');

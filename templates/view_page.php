@@ -1,8 +1,6 @@
 <section id="content">
   <div id="view_page_header">
   <h1 id="view_page_header_title"><?=$restaurant['name']?> | <?=$restaurant['likes'] ?>
-
-
     <?php if(isset($_SESSION['username'])){ ?>
           <a href="action_like_restaurant.php?cat_id=<?=$restaurant['id']?>">
             <img  src="images/like.png" width="25" height="25" />
@@ -11,10 +9,6 @@
            <?php if(!isset($_SESSION['username'])){ ?>
                    <img  src="images/like.png" width="25" height="25" />
                   <?php } ?>
-
-
-
-
   </h1>
   <h3 id="description" ><?=$restaurant['description']?></h3>
   <img id="image_restaurant" src="images/restaurant<?=$restaurant['id']?>.png">
@@ -22,6 +16,7 @@
    <a class="btn"  href="edit_restaurant.php?cat_id=<?=$restaurant[id]?>">Edit</a>
   <?php } ?>
   </div>
+
 
   <ul id="menus">
    <?php foreach ($menus as $menu) { ?>
@@ -40,9 +35,14 @@
    <?php } ?>
   </ul>
 
+
+
   <ul id ="reviews">
    <?php foreach ($reviews as $review) { ?>
-     
+
+     <?php if($review[reply]==NULL) { ?>
+ <?php $replies=getReplies($review[id])?>
+
      <li>
        <div>User:
          <?=$review['username']?>
@@ -51,15 +51,34 @@
          <?=$review['review']?>
        </div>
 
-
-
-         <?php if (isset($_SESSION['username'])) {?>
-         <button type="button">Reply!</button>
-         <?php } ?>
-     </li>
+       <?php if (isset($_SESSION['username'])) {?>
+       <div class="dropdown-replies">
+       <button type="button">Reply!</button>
+       <div class="dropdown-content-replies">
+       <form  method="POST" id="reply" action="action_create_reply.php">
+         <input type="hidden"  name="username" value="<?=$_SESSION['username']?>">
+         <input type="hidden"  name="cat_id"  value="<?=$restaurant['id']?>">
+         <input type="hidden"  name="reply"  value="<?=$review['id']?>">
+         <textarea name="review" rows="5" cols="30"></textarea>
+       <input type="submit" value="Comment">
+       </form>
+       </div>
+       </div>
+<?php } ?>
+         <ul id ="replies">
+    <?php foreach ($replies as $review) { ?>
+      <li >
+        <div>User:
+          <?=$review['username']?>
+        </div>
+        <div>
+          <?=$review['review']?>
+        </div>
+      <?php } ?>
+    </ul>
    <?php } ?>
+<?php } ?>
   </ul>
-
 
 
 

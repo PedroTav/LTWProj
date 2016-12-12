@@ -117,6 +117,20 @@ nav a {
   color: white;
 }
 
+#replies{
+  padding: 0;
+  margin: 0;
+}
+
+#replies li{
+  display: block;
+  clear: left;
+  background-color: #a3310e;
+  margin: 1em 0;
+  padding: 1em;
+  color: white;
+}
+
 #view_page_header{
    background-image: url('../images/back.png');
 }
@@ -155,6 +169,29 @@ nav a {
     padding: 15px;
     text-align: center;
     color: black;
+}
+
+.dropdown-replies {
+   position: relative;
+   display: inline-block;
+}
+
+.dropdown-content-replies {
+   display: none;
+   position: absolute;
+   background-color: #bbe6f9;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-replies:hover .dropdown-content-replies {
+   display: block;
+}
+
+.desc-replies {
+   padding: 15px;
+   text-align: center;
+   color: black;
 }
 
 
