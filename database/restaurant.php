@@ -7,6 +7,14 @@
     return $stmt->fetchAll();
   }
 
+  function getRestaurantsByType($type) {
+    global $conn;
+
+    $stmt = $conn->prepare("SELECT * FROM restaurant WHERE type=$type");
+    $stmt->execute();
+    return $stmt->fetchAll();
+  }
+
   function getRestaurant($cat_id) {
     global $conn;
 
