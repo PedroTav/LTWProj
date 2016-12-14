@@ -22,7 +22,5 @@
      </li>
    <?php } ?>
  </ul>
- <?php if (isset($_SESSION['username'])) {?>
-   <a href="action_add_restaurant.php">Add your Restaurant to our list</a>
- <?php } ?>
+
 </section>

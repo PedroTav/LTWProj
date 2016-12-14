@@ -1,4 +1,5 @@
 <section id="content">
+  <script type="text/javascript" src="scripts/script.js"></script>
   <div id="view_page_header">
   <h1 id="view_page_header_title"><?=$restaurant['name']?> | <?=$restaurant['likes'] ?>
 
@@ -28,10 +29,18 @@
   </h1>
   <h3 id="description" ><?=$restaurant['description']?></h3>
   <img id="image_restaurant" src="images/restaurant<?=$restaurant['id']?>.png">
+
+
   <?php if ($_SESSION['username'] == $restaurant[cat_user]) {?>
    <a class="btn"  href="edit_restaurant.php?cat_id=<?=$restaurant[id]?>">Edit</a>
   <?php } ?>
   </div>
+
+
+  <!--  <div class="slideshow" style="max-width:50px">
+      <img class="mySlides" src="images/restaurant1.png" style="width:100%">
+      <img class="mySlides" src="images/restaurant2.png" style="width:100%">
+    </div> -->
 
 
   <ul id="menus">
