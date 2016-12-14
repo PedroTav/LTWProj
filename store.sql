@@ -1,4 +1,4 @@
-CREATE TABLE restaurant (
+﻿CREATE TABLE restaurant (
   id INTEGER PRIMARY KEY,
   likes INTEGER,
   name VARCHAR NOT NULL,
@@ -32,8 +32,7 @@ CREATE TABLE menu(
   cat_id INTEGER REFERENCES restaurant NOT NULL
 );
 
-INSERT INTO restaurant VALUES (1, 35 , 'Canto das Gaveas', 'Fast' , 'O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que incluem versões do Lorem Ipsum.');
+INSERT INTO restaurant VALUES (1, 35 , 'Canto das Gaveas', 'Fast' , 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis arcu ac dui laoreet eleifend. Sed id mauris ante. Etiam eget elementum nunc, vel tempor erat. Vivamus id dapibus erat. Aenean dolor tellus, viverra quis ultricies sit amet, malesuada ut lorem. Etiam urna est, scelerisque ac tempus in, porttitor vel dui. Sed sit amet tortor tincidunt, tincidunt orci sed, tincidunt tortor. Quisque sit amet ex feugiat, tempus ex eget, fringilla ex.');
 
 
-INSERT INTO restaurant VALUES (2, 190 , 'Tasca dos Rubins', 'Tasca' , 'O Lorem Ipsu
-  m é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que incluem versões do Lorem Ipsum.');
+INSERT INTO restaurant VALUES (2, 190 , 'Tasca dos Rubins', 'Tasca' , 'Mauris gravida tortor sed metus rutrum, at varius lacus fringilla. In eleifend venenatis nisi, sit amet ornare arcu gravida in. Curabitur eu lacus accumsan, consequat sapien et, consectetur enim. Etiam egestas sodales nisl, sed fermentum mauris varius ac. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent a porttitor augue. Duis quis diam sem.');

@@ -1,13 +1,26 @@
 body {
-  background-color: #20498c;
+  background-image: url('http://tamirarestaurant.com/wp-content/uploads/2013/12/343299.jpg');
+  background-color: #F5DEB3;
+  background-size: 1920px 1200px;
+   background-attachment: local;
   width: 60em;
   margin: 0 auto;
 }
 
 header {
+  background-image: url('http://synergyconsultants.com/wp-content/uploads/2015/07/restaurant-design-header.jpg');
+  background-position: left top;
+  background-size: 1000px 140px;
+  background-attachment: local;
+  background-repeat: no-repeat;
+  font-family: "Arial";
+  font-size: 1em;
   background-color: #b2cfff;
   color: white;
   padding: 3em;
+  border-style: solid;
+  border-color: #FFFFFF;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 header h1 {
@@ -35,26 +48,52 @@ nav li:last-child {
 }
 
 nav a {
+  font-family: "Arial";
+  font-weight: bold;
   color: white;
   text-decoration: none;
 }
 
+.mySlides {
+  padding: 1em;
+  width: 20em;
+  height: 20em;
+  display:none;}
+
+.slideshow{display: inline-block;}
+
 #content {
-  background-color: #b2cfff;
+  border-style: solid;
+  border-color: #FFFFFF;
+  background-color: #F5DEB3;
   padding: 3em;
 }
 
 #content h2 {
-  margin: 0;
+  width: 100%;
+  height: 200px;
+  font-family: "Georgia";
+  text-align: center;
+  font-size: 4em;
+  padding-top: 80px;
+  background-image: url('http://www.elladrillorest.com/images/website%20el%20ladrillo%202-wood_backgroundc.png?crc=3809536029');
+  background-position: center;
+  background-size: 800px 200px;
+  background-attachment: local;
+  background-repeat: no-repeat;
+  margin: 0em;
   color: #424242;
 }
 
 #content ul {
+  font-family: "Arial";
   padding: 0;
   margin: 0;
 }
 
 #content li {
+  border-style: solid;
+  border-color: #FFFFFF;
   display: block;
   clear: left;
   background-color: #424242;
@@ -101,8 +140,6 @@ nav a {
   margin: 0;
 }
 
-
-
 #reviews{
   padding: 0;
   margin: 0;
@@ -132,10 +169,17 @@ nav a {
 }
 
 #view_page_header{
+   border-style: solid;
+   border-color: #FFFFFF;
    background-image: url('../images/back.png');
 }
 
+#view_page_header h3{
+   margin: 0em;
+}
+
 #view_page_header_title{
+  font-family: "Arial";
   padding-top:1em;
   padding-left:1em;
 }
@@ -198,7 +242,7 @@ nav a {
 
 
 footer {
-  background-color: #b2cfff;
+  background-color: #e8743e;
   color: white;
   padding: 1em 3em;
 }

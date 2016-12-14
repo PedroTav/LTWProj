@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Lounge Porto</title>
+    <title>LOUNGE PORTO</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
-      <h1>Lounge Porto</h1>
+      <h1>LOUNGE PORTO</h1>
     </header>
     <nav>
       <?php
