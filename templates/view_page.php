@@ -28,7 +28,12 @@
                   <?php } ?>
   </h1>
   <h3 id="description" ><?=$restaurant['description']?></h3>
-  <img id="image_restaurant" src="images/restaurant<?=$restaurant['id']?>.png">
+  <!--  <img id="image_restaurant" src="images/restaurant<?=$restaurant['id']?>.png"> -->
+
+   <div class="slideshow" style="max-width:250px">
+      <img class="mySlides" src="images/restaurant<?=$restaurant[id]?>_1.png" style="width:100%">
+      <img class="mySlides" src="images/restaurant<?=$restaurant[id]?>_2.png" style="width:100%">
+    </div>
 
 
   <?php if ($_SESSION['username'] == $restaurant[cat_user]) {?>
@@ -37,17 +42,13 @@
   </div>
 
 
-  <!--  <div class="slideshow" style="max-width:50px">
-      <img class="mySlides" src="images/restaurant1.png" style="width:100%">
-      <img class="mySlides" src="images/restaurant2.png" style="width:100%">
-    </div> -->
-
 
   <ul id="menus">
    <?php foreach ($menus as $menu) { ?>
      <li>
       <div class="dropdown">
   <img src="images/menu-<?=$restaurant[id]?>-<?=$menu[id]?>.png" alt="Menu" width="100" height="100">
+  <h3><?=$menu[price]?></h3>
   <div class="dropdown-content">
     <img src="images/menu-<?=$restaurant[id]?>-<?=$menu[id]?>.png" alt="Menu" width="300" height="200">
     <div class="desc">Menu <?=$restaurant[id]?> - <?=$menu[id]?></div>
@@ -57,6 +58,15 @@
           <input type="image" src="images/like.png" width="25" height="25" />
          <?php } ?>
      </li>
+   <?php } ?>
+
+   <?php if ($_SESSION['username'] == $restaurant[cat_user]) {?>
+   <li>
+     <a href = "create_menu.php?cat_id=<?=$restaurant[id]?>">
+       <img src="images/create_menu.png">
+     </a>
+   </li>
+
    <?php } ?>
   </ul>
 

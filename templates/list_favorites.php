@@ -11,14 +11,22 @@
        </a>
        <?="Pontuação: "?> <?=$rest['likes']?>
        <?php if($rest['type'] == "Fast"): ?>
-         <a href="list_by_type.php?type='Fast' ">
-         <img id="type_image" src="images/category1.png">
-       </a>
-     <?php elseif($rest['type'] == "Tavern"): ?>
-         <a href="list_by_type.php?type='Tavern' ">
-         <img id="type_image" src="images/category2.png">
-       </a>
-       <?php endif ?>
+
+        <img id="type_image" src="images/category1.png">
+
+      <?php elseif($rest['type'] == "Pizzaria"): ?>
+
+        <img id="type_image" src="images/category2.png">
+
+  <?php elseif($rest['type'] == "Tavern"): ?>
+
+        <img id="type_image" src="images/category3.png">
+
+  <?php elseif($rest['type'] == "Seafood"): ?>
+
+        <img id="type_image" src="images/category4.png">
+
+      <?php endif ?>
      </li>
    <?php } ?>
  </ul>

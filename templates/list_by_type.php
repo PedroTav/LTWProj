@@ -8,9 +8,21 @@
        </a>
        <?="Pontuação: "?> <?=$restaurant['likes']?>
        <?php if($restaurant['type'] == "Fast"): ?>
+
          <img id="type_image" src="images/category1.png">
-       <?php elseif($restaurant['type'] == "Tavern"): ?>
+
+       <?php elseif($restaurant['type'] == "Pizzaria"): ?>
+
          <img id="type_image" src="images/category2.png">
+
+   <?php elseif($restaurant['type'] == "Tavern"): ?>
+
+         <img id="type_image" src="images/category3.png">
+
+   <?php elseif($restaurant['type'] == "Seafood"): ?>
+
+         <img id="type_image" src="images/category4.png">
+
        <?php endif ?>
      </li>
    <?php } ?>
