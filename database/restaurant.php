@@ -7,7 +7,7 @@
     return $stmt->fetchAll();
   }
 
-  
+
 
   function getRestaurantsByType($type) {
     global $conn;
@@ -28,16 +28,16 @@
   function createRestaurant($name,$description,$type,$owner) {
     global $conn;
 
-    $stmt = $conn->prepare('INSERT INTO restaurant VALUES (NULL, ?, ? , ? , ?, ?)');
-    $stmt->execute(array(0,$name,$type,$description,$owner));
+    $stmt = $conn->prepare('INSERT INTO restaurant VALUES (NULL, ?,?, ? , ? , ?, ?)');
+    $stmt->execute(array(0,0,$name,$type,$description,$owner));
     return $stmt->fetch();
   }
 
-  function editRestaurant($name,$description,$type,$id) {
+  function editRestaurant($name,$description,$type,$id,$images) {
     global $conn;
 
     $stmt = $conn->prepare("UPDATE restaurant
-SET name='$name',description='$description',type='$type'
+SET images='$images', name='$name',description='$description',type='$type'
 WHERE id='$id' ");
     $stmt->execute();
     //$stmt->execute(array($name,$description,$type));
@@ -57,6 +57,15 @@ WHERE id='$id' ");
 
       $stmt = $conn->prepare('INSERT INTO Favorites VALUES (?, ?)');
       $stmt->execute(array($username,$cat_id));
+      return $stmt->fetch();
+    }
+
+
+    function upload($cat_id) {
+      global $conn;
+
+      $stmt = $conn->prepare(" UPDATE restaurant SET images=images+1 WHERE id='$cat_id' ");
+        $stmt->execute();
       return $stmt->fetch();
     }
 

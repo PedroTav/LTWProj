@@ -1,7 +1,7 @@
 <section id="content">
   <h2>Add a Restaurant</h2>
   <form action="action_create_restaurant.php" method="post">
-    <input type="hidden" name="username" value="<?php $_SESSION[username]?>">
+    <input type="hidden" name="username" value="<?php $_SESSION['username']?>">
     <label>Name:
       <input type="text" name="name">
     </label>

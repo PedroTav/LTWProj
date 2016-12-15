@@ -30,14 +30,26 @@
   <h3 id="description" ><?=$restaurant['description']?></h3>
   <!--  <img id="image_restaurant" src="images/restaurant<?=$restaurant['id']?>.png"> -->
 
-   <div class="slideshow" style="max-width:250px">
-      <img class="mySlides" src="images/restaurant<?=$restaurant[id]?>_1.png" style="width:100%">
-      <img class="mySlides" src="images/restaurant<?=$restaurant[id]?>_2.png" style="width:100%">
-    </div>
+<?php if($restaurant['images'] == 0) {?>
+  <img  src="images/new_files.png" >
+  <?php }?>
+
+  <?php if($restaurant['images'] != 0) {?>
+    <div class="slideshow" style="max-width:250px">
+   <?php for($i = 1; $i <= $restaurant['images']; $i++) { ?>
+         <img class="mySlides" src="images/restaurant<?=$restaurant[id]?>_<?=$i?>.png" style="width:100%">
+         <?php } ?>
+       </div>
+    <?php }?>
+
 
 
   <?php if ($_SESSION['username'] == $restaurant[cat_user]) {?>
    <a class="btn"  href="edit_restaurant.php?cat_id=<?=$restaurant[id]?>">Edit</a>
+  <?php } ?>
+
+  <?php if ($_SESSION['username'] == $restaurant[cat_user]) {?>
+   <?php  include('templates/upload_file.php') ?>
   <?php } ?>
   </div>
 

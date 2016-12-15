@@ -2,6 +2,7 @@
   <h2>Add a Restaurant</h2>
   <form action="action_edit_restaurant.php" method="post">
     <input type="hidden"  name="cat_id"  value="<?=$restaurant['id']?>">
+      <input type="hidden"  name="images"  value="<?=$restaurant['images']?>">
     <label>Name:
       <input type="text" name="name">
     </label>
