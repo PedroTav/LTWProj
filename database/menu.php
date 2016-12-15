@@ -1,10 +1,11 @@
 <?php
 
-  function createMenu($name,$price,$description) {
+function createMenu($name,$price,$cat_id) {
     global $conn;
 
     $stmt = $conn->prepare('INSERT INTO menu VALUES (NULL, ? , ?, ?)');
-    $stmt->execute(array($username,$review));
+    $stmt->execute(array($name,$price,$cat_id));
+
     return $stmt->fetch();
   }
 
@@ -15,4 +16,6 @@
     $stmt->execute(array($cat_id));
     return $stmt->fetchAll();
   }
+
+
 ?>

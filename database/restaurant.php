@@ -7,6 +7,8 @@
     return $stmt->fetchAll();
   }
 
+  
+
   function getRestaurantsByType($type) {
     global $conn;
 

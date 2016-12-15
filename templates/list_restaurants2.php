@@ -11,8 +11,8 @@
           <a href="list_by_type.php?type='Fast' ">
           <img id="type_image" src="images/category1.png">
         </a>
-        <?php elseif($restaurant['type'] == "Pizzaria"): ?>
-          <a href="list_by_type.php?type='Pizzaria' ">
+      <?php elseif($restaurant['type'] == "Pizzeria"): ?>
+          <a href="list_by_type.php?type='Pizzeria' ">
           <img id="type_image" src="images/category2.png">
         </a>
 		<?php elseif($restaurant['type'] == "Tavern"): ?>

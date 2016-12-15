@@ -11,7 +11,7 @@
 
          <img id="type_image" src="images/category1.png">
 
-       <?php elseif($restaurant['type'] == "Pizzaria"): ?>
+       <?php elseif($restaurant['type'] == "Pizzeria"): ?>
 
          <img id="type_image" src="images/category2.png">
 

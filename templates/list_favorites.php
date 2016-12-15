@@ -1,5 +1,5 @@
 <section id="content">
- <h2>Restaurants</h2>
+ <h2>Favorites</h2>
 
  <ul class="favorites">
    <?php foreach ($favorites as $favorite) { ?>
@@ -14,7 +14,7 @@
 
         <img id="type_image" src="images/category1.png">
 
-      <?php elseif($rest['type'] == "Pizzaria"): ?>
+      <?php elseif($rest['type'] == "Pizzeria"): ?>
 
         <img id="type_image" src="images/category2.png">
 
